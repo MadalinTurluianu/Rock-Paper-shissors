@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(28, 118, 202);
+    height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+h1{
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 3rem;
+}
+
+main{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div{
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: rgb(238, 212, 66);
+    width: clamp(5rem,12vw,15rem);
+    height: clamp(5rem,12vw,15rem);
+}
