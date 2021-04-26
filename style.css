@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(28, 118, 202);
+    background-color: rgb(7, 74, 138);
     height: 100vh;
     display: -webkit-box;
     display: -webkit-flex;
@@ -13,7 +13,28 @@ h1{
     color: white;
     font-family: sans-serif;
     text-align: center;
-    font-size: 3rem;
+    font-size: calc(1rem + 1vw);
+}
+
+section{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section button{
+    border: 2px solid white;
+    border-radius: 20px;
+    outline: none;
+    width: clamp(5rem, 8vw, 10rem);
+    height: clamp(2rem, 3vw, 4rem);
+    background-image: linear-gradient(to bottom, rgb(0, 169, 236), rgb(0, 221, 136));
+    color: white;
+    font-size: calc(0.6rem + 0.7vw);
+    letter-spacing: 2px;
 }
 
 main{
@@ -23,12 +44,13 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 10vh;
 }
 
 div{
     border: 2px solid white;
     border-radius: 50%;
-    background-color: rgb(238, 212, 66);
+    background-image: linear-gradient(to bottom, rgb(0, 169, 236), rgb(0, 221, 136));
     width: clamp(5rem,12vw,15rem);
     height: clamp(5rem,12vw,15rem);
 }
