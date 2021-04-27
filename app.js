@@ -35,8 +35,8 @@ function whoWins(userChoice, computerChoice) {
     result = "The computer won!";
   }
 
-  let winnerText = `<h2>${result}</h2>`
- 
+  let winnerText = `<h2>${result}</h2>`;
+
   winner.innerHTML = winnerText;
 }
 
@@ -58,6 +58,10 @@ function addImages(userChoice, computerChoice) {
 // create a way for the user to input his choice
 
 function startRound() {
+  const rockBtn = document.querySelector(".rock-btn");
+  const paperBtn = document.querySelector(".paper-btn");
+  const scissorsBtn = document.querySelector(".scissors-btn");
+
   window.addEventListener("keydown", function (e) {
     if (e.key === "r" || e.key === "R") {
       let userChoice = "ROCK";
@@ -79,24 +83,44 @@ function startRound() {
       whoWins(userChoice, computerChoice);
     }
   });
+
+  rockBtn.addEventListener("click", function () {
+    let userChoice = "ROCK";
+    console.log(`The user picked ${userChoice}`);
+    let computerChoice = computerPick();
+    addImages(userChoice, computerChoice);
+    whoWins(userChoice, computerChoice);
+  });
+
+  paperBtn.addEventListener("click", function () {
+    let userChoice = "PAPER";
+    console.log(`The user picked ${userChoice}`);
+    let computerChoice = computerPick();
+    addImages(userChoice, computerChoice);
+    whoWins(userChoice, computerChoice);
+  });
+
+  scissorsBtn.addEventListener("click", function () {
+    let userChoice = "SCISSORS";
+    console.log(`The user picked ${userChoice}`);
+    let computerChoice = computerPick();
+    addImages(userChoice, computerChoice);
+    whoWins(userChoice, computerChoice);
+  });
 }
 
 // create the game
 
 function playGame() {
   const section = document.querySelector("section");
+  const instructions = document.querySelectorAll(".choices");
 
-  // create the instructions to how to chose
-  const instructions = document.createElement("div");
-  instructions.innerHTML = `
-    <h3>Press <span>R</span> for rock</h3>
-    <h3>press <span>P</span> for paper</h3>
-    <h3>press <span>S</span> for scissors</h3>
-    `;
   // remove the play button and add the instructions
 
   section.removeChild(startBtn);
-  section.appendChild(instructions);
+  instructions.forEach(function(element){
+    element.classList.remove("choices");
+  })
 
   startRound();
 }

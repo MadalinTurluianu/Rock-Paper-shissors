@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
     <script src="app.js" defer></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1><strong>Welcome to Rock Paper Scissors game!</strong></h1>
 
     <section>
-        <button class="play"><strong>PLAY</strong></button>
+      <button class="play"><strong>PLAY</strong></button>
+
+      <div class="choices">
+        <h3>Press <span>R</span> for rock</h3>
+        <button class="rock-btn">R</button>
+      </div>
+      <div class="choices">
+        <h3>press <span>P</span> for paper</h3>
+        <button class="paper-btn">P</button>
+      </div>
+      <div class="choices">
+        <h3>press <span>S</span> for scissors</h3>
+        <button class="scissors-btn">S</button>
+      </div>
     </section>
 
     <div class="winner"></div>
 
     <main>
-        <div class="player">
-            <div class="image-wrapper"></div>
-            <h2>Player</h2>
-        </div>
-        <div class="computer">
-            <div class="image-wrapper"></div>
-            <h2>Computer</h2>
-        </div>  
-    </main>  
-
-</body>
+      <div class="player">
+        <div class="image-wrapper"></div>
+        <h2>Player</h2>
+      </div>
+      <div class="computer">
+        <div class="image-wrapper"></div>
+        <h2>Computer</h2>
+      </div>
+    </main>
+  </body>
 </html>
